@@ -1,6 +1,5 @@
-# SudokuGame
+# SudokuGame - Pablo Sanchez Narro
 Command-based Sudoku Game!
-# Pablo Sanchez Narro
 
 Sudoku implementation in C Programming Language.
 TO RUN IT:
