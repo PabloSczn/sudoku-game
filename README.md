@@ -18,3 +18,5 @@ and click on Developer Command Prompt for VS 2022.  You should then type cl and 
 If you see the line "Microsoft (R) C/C++ Optimizing Compiler Version 19.30.30709 for x86" then you're good to go!
 
 Other compilers can be used.
+
+This project uses recursion and backtracking
