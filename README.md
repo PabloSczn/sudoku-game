@@ -25,7 +25,6 @@ To compile the game, use the following command in your terminal:
 gcc Sudoku.c -o Sudoku
 ```
 
-Replace `sudoku_game.c` with the path to the source file if necessary.
 
 ### Running the Game
 
@@ -45,10 +44,24 @@ Follow the on-screen instructions to play the game.
 4. **Save/Load Game:** You can save your game progress at any time and load it later to continue.
 5. **Exit:** You can exit the game anytime by selecting the exit option.
 
-## How It Works
+## Key Algorithms and Data Structures:
 
-- The game initializes with a menu offering options to start a new game, load a game, enable/disable the timer, and exit.
-- The Sudoku board is populated with a valid solution and then partially emptied based on the difficulty level.
-- Players input their moves, and the game validates these moves against Sudoku rules.
-- The undo/redo stack keeps track of the moves for the undo and redo functionality.
-- The game checks for a win condition (all cells correctly filled) or end of the timer to conclude the gameplay.
+1. **Backtracking Algorithm:**
+    - **Usage:** Generates and solves the Sudoku board.
+    - **Function:** `populateBoardRecursively` tries numbers in each cell and backtracks if duplicates are found.
+
+2. **Validation Functions:**
+    - **Purpose:** Ensures no duplicates in rows, columns, and 3x3 boxes.
+    - **Functions:** `duplicateInRow`, `duplicateInCol`, `duplicateInBox`, and `isBoardValid`.
+
+3. **Data Structures:**
+    - **2D Array:** Represents the Sudoku board (`int sudoku[9][9]`).
+    - **Stack:** Used for undo/redo functionality with `struct stack`.
+
+4. **File Handling:**
+    - **Purpose:** Save and load game states.
+    - **Functions:** `saveGame` and `readGame`.
+
+
+## Demo
+You can find a demo here: https://www.youtube.com/watch?v=3O1fJ-Pqw74
