@@ -22,7 +22,7 @@ This is a C-based console application for playing Sudoku, a popular number puzzl
 To compile the game, use the following command in your terminal:
 
 ```bash
-gcc sudoku_game.c -o sudoku_game
+gcc Sudoku.c -o Sudoku
 ```
 
 Replace `sudoku_game.c` with the path to the source file if necessary.
@@ -32,7 +32,7 @@ Replace `sudoku_game.c` with the path to the source file if necessary.
 After compilation, you can start the game using:
 
 ```bash
-./sudoku_game
+./Sudoku
 ```
 
 Follow the on-screen instructions to play the game.
