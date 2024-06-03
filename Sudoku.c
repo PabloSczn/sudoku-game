@@ -1,9 +1,8 @@
 /**
  * Author: Pablo Sanchez Narro
- * Matriculation number: 40486559
  *
  * Sudoku Game Implementation
- * Last Date of Modification: 10/04/2022
+ * Last Date of Modification: 03/06/2024
 */
 #include <stdio.h>
 #include <stdlib.h>
