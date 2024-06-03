@@ -44,7 +44,7 @@ void populateBoard(int sudoku[][9], int numToPopulate);
 int duplicateInRow(int sudoku[][9], int row);
 int duplicateInCol(int sudoku[][9], int col);
 int duplicateInBox(int sudoku[][9], int r, int c);
-int isBoardValid(int sudoku[][9]);
+int isBoardValid(int sudoku[][9], int row, int col);
 int populateBoardRecursively(int sudoku[][9], int row, int col);
 int boardFilled(int sudoku[][9]);
 void printBoard(int sudoku[][9]);
@@ -171,7 +171,7 @@ int main()
 
 					// Trying to put the value
 					sudoku[row][col] = value;
-					if (isBoardValid(sudoku)) 
+					if (isBoardValid(sudoku, row, col)) 
 					{
 						// User's move was placed
 						system("cls");// make the screen pretty by getting rid of whatever there was before
@@ -368,43 +368,20 @@ int populateBoardRecursively(int sudoku[][9], int row, int col)
 /**
 * This function checks if the board is valid
 */ 
-int isBoardValid(int sudoku[][9]) 
+int isBoardValid(int sudoku[][9], int row, int col) 
 {
+    // Check the row and column of the current cell
+    if (duplicateInRow(sudoku, row) || duplicateInCol(sudoku, col)) {
+        return 0;
+    }
 
-	int i = 0;
-	int j = 0;
+    // Check the 3x3 box of the current cell
+    if (duplicateInBox(sudoku, row - row % 3, col - col % 3)) {
+        return 0;
+    }
 
-	for (i = 0; i < 9; i++) 
-	{
-		if (duplicateInRow(sudoku, i)) 
-		{
-			// Found a duplicate in row so board invalid
-			return 0;
-		}
-	}
-
-	for (i = 0; i < 9; i++) 
-	{
-		if (duplicateInCol(sudoku, i)) 
-		{
-			// Found a duplicate in column so board invalid
-			return 0;
-		}
-	}
-
-	for (i = 0; i < 9; i++) 
-	{
-		for (j = 0; j < 9; j++) 
-		{
-			if (duplicateInBox(sudoku, i - i % 3, j - j % 3)) 
-			{
-				// Found a duplicate in column so board invalid
-				return 0;
-			}
-		}
-	}
-	// All tests cleared so board is valid
-	return 1;
+    // All tests cleared so the board is valid
+    return 1;
 }
 
 
