@@ -1,6 +1,9 @@
 # Sudoku Game Implementation
 
-This is a C-based console application for playing Sudoku, a popular number puzzle game. The implementation allows users to play Sudoku in a terminal, offering features like undo/redo moves, saving/loading games, and a timer for gameplay.
+This is a C-based console application for playing Sudoku, a popular number puzzle game. The implementation allows users to play Sudoku in a terminal, offering features like undo/redo moves, saving/loading games, and a timer for gameplay. 
+<br>
+![alt text](imgs/intro.png)
+![alt text](imgs/board.png)
 
 ## Features
 
